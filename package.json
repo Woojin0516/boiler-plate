@@ -4,13 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js",
+    "backend": "nodemon server/index.js",
+    "frontend": "npm run start --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"concurrently \"npm run backend\" \"npm run start --prefix client \""
   },
   "author": "choiwoojin",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.0.2",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
-    "mongoose":"^5.12.7"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
