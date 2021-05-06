@@ -41,8 +41,6 @@ function RegisterPage(props) {
             email: Email,
             password: Password,
             name: Name
-            
-
         }
 
         dispatch(registerUser(body))
