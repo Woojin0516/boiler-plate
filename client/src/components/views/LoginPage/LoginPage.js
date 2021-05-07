@@ -19,7 +19,11 @@ function LoginPage(props){
     const onSubmitHandler = (event) =>{
         //리프레쉬 방지
         event.preventDefault();
-       
+       if(Email===""){
+           
+           return alert("입력해 주세요");
+       }
+
         let body = {
             email: Email,
             password: Password
